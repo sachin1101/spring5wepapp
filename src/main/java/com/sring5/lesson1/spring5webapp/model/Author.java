@@ -12,8 +12,10 @@ public class Author {
     private String firstName;
     private String lastName;
 
-    @ManyToMany
-    private Set<Book> books = new HashSet<>();
+ private String forGitPush;
+
+       @ManyToMany(mappedBy = "authors")
+        private Set<Book> books = new HashSet<>();
 
 
     public Author()
