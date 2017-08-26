@@ -14,7 +14,7 @@ public class Author {
 
  private String forGitPush;
 
-       @ManyToMany(mappedBy = "authors")
+       @ManyToMany(mappedBy = "authors" , cascade = CascadeType.ALL)
         private Set<Book> books = new HashSet<>();
 
 
